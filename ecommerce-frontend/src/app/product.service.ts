@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
-  private baseUrl = 'http://localhost:8000/api';
+  private baseUrl = 'https://ecommerce-project-3m0g.onrender.com/api';
   constructor(private http: HttpClient) {}
   getProducts(): Observable<any> { return this.http.get(`${this.baseUrl}/products/`); }
   getCart(): Observable<any>     { return this.http.get(`${this.baseUrl}/cart/`); }
